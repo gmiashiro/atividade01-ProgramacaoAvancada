@@ -21,6 +21,10 @@ public class EstudanteService {
         return estudanteRepository.findAll();
     }
 
+    public EstudanteModel findById(Long id){
+        return estudanteRepository.findById(id).orElse(null);
+    }
+
     public void deleteById(Long id){
         estudanteRepository.deleteById(id);
     }
